@@ -8,6 +8,12 @@ echo $_SERVER['REQUEST_METHOD'];
 var_dump($_GET); 
 ?>
 
+<h1>BODY:</h1>
+<?php
+echo stream_get_contents(STDIN);
+?>
+
+
 <h1>HEADERS:</h1>
 <?php
 foreach (getallheaders() as $name => $value) {
