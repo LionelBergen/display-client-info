@@ -64,7 +64,7 @@ var_dump($_REQUEST);
 		} else if (typeof object === 'object') {
 			let formattedPrint = "{";
 			for (let objectProperty in object) {
-				formattedPrint += (objectProperty + ":" + objectToString(object[objectProperty]);
+				formattedPrint += (objectProperty + ":" + objectToString(object[objectProperty]));
 				formattedPrint += ",";
 			}
 			return formattedPrint + "}";
