@@ -46,7 +46,7 @@ var_dump($_SERVER);
 		} else if (object === null) {
 			return 'null';
 		} else {
-			return JSON.stringify(valuePrinted);
+			return JSON.stringify(object);
 		}
 	}
 	const navigatorListElement = document.getElementById("navigator");
