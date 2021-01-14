@@ -3,9 +3,19 @@
 echo $_SERVER['REQUEST_METHOD'];
 ?>
 
-<h1>REQUEST</h1>
+<h1>REQUEST:</h1>
 <?php
 var_dump($_GET); 
+?>
+
+<h1>PATH:</h1>
+<?php
+echo $_SERVER['REQUEST_URI'];
+?>
+
+<h1>PROTOCOL:</h1>
+<?php
+echo $_SERVER['SERVER_PROTOCOL'];
 ?>
 
 <h1>BODY:</h1>
