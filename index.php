@@ -57,7 +57,7 @@ var_dump($_SERVER);
 			}
 			return formattedPrint + "]";
 		} else {
-			return JSON.stringify(object);
+			return object;
 		}
 	}
 	const navigatorListElement = document.getElementById("navigator");
