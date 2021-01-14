@@ -36,6 +36,11 @@ foreach (getallheaders() as $name => $value) {
 var_dump($_SERVER);
 ?>
 
+<h1>WHOLE REQUEST:</h1>
+<?php
+var_dump($_REQUEST);
+?>
+
 <h1>Navigator:</h1>
 <ol id="navigator"></ol>
 
@@ -56,8 +61,15 @@ var_dump($_SERVER);
 				}
 			}
 			return formattedPrint + "]";
+		} else if (typeof object === 'object') {
+			let formattedPrint = "{";
+			for (let objectProperty in object) {
+				formattedPrint += (objectProperty + ":" + objectToString(object[objectProperty]);
+				formattedPrint += ",";
+			}
+			return formattedPrint + "}";
 		} else {
-			return object;
+			return object;//JSON.stringify(object);
 		}
 	}
 	const navigatorListElement = document.getElementById("navigator");
