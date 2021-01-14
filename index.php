@@ -32,3 +32,12 @@ foreach (getallheaders() as $name => $value) {
 ?>
 
 <h1>Navigator:</h1>
+<ol id="navigator"></ol>
+
+<script>
+	const navigatorListElement = document.getElementById("navigator");
+	
+	for (let prop in navigator) { 
+		navigatorListElement.innerHTML += ("<li>" + prop + ":" + navigator[prop] + "</li>");
+	}
+</script>
