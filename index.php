@@ -1,6 +1,6 @@
 <h1>PROTOCOL</h1>
 <?php
-$_SERVER['REQUEST_METHOD']
+echo $_SERVER['REQUEST_METHOD'];
 ?>
 
 <h1>REQUEST</h1>
