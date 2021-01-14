@@ -1,3 +1,5 @@
 <?php
-	echo 'hello world';
+foreach (getallheaders() as $name => $value) {
+    echo "$name: $value\n";
+}
 ?>
