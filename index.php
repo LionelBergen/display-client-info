@@ -45,6 +45,8 @@ var_dump($_SERVER);
 			return 'undefined';
 		} else if (object === null) {
 			return 'null';
+		} else if (typeof object === 'function') {
+			return object.toString();
 		} else {
 			return JSON.stringify(object);
 		}
