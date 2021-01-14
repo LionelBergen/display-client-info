@@ -42,7 +42,15 @@ var_dump($_SERVER);
 <script>
 	const navigatorListElement = document.getElementById("navigator");
 	
-	for (let prop in navigator) { 
-		navigatorListElement.innerHTML += ("<li>" + prop + ":" + navigator[prop].toString() + "</li>");
+	for (let prop in navigator) {
+		let valuePrinted = navigator[prop];
+		if (valuePrinted === undefined) {
+			valuePrinted = 'undefined';
+		} else if (valuePrinted === null) {
+			valuePrinted = 'null';
+		} else {
+			valuePrinted = valuePrinted.toString();
+		}
+		navigatorListElement.innerHTML += ("<li>" + prop + ":" + valuePrinted + "</li>");
 	}
 </script>
