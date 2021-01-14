@@ -10,7 +10,7 @@ var_dump($_GET);
 
 <h1>BODY:</h1>
 <?php
-echo stream_get_contents(STDIN);
+echo file_get_contents('php://input');
 ?>
 
 
