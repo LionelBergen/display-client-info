@@ -31,6 +31,11 @@ foreach (getallheaders() as $name => $value) {
 }
 ?>
 
+<h1>Whole SERVER:</h1>
+<?php
+var_dump($_SERVER);
+?>
+
 <h1>Navigator:</h1>
 <ol id="navigator"></ol>
 
@@ -38,6 +43,6 @@ foreach (getallheaders() as $name => $value) {
 	const navigatorListElement = document.getElementById("navigator");
 	
 	for (let prop in navigator) { 
-		navigatorListElement.innerHTML += ("<li>" + prop + ":" + navigator[prop] + "</li>");
+		navigatorListElement.innerHTML += ("<li>" + prop + ":" + navigator[prop].toString() + "</li>");
 	}
 </script>
