@@ -40,17 +40,20 @@ var_dump($_SERVER);
 <ol id="navigator"></ol>
 
 <script>
+    function objectToString(object) {
+		if (object === undefined) {
+			return 'undefined';
+		} else if (object === null) {
+			return 'null';
+		} else {
+			return JSON.stringify(valuePrinted);
+		}
+	}
 	const navigatorListElement = document.getElementById("navigator");
 	
 	for (let prop in navigator) {
-		let valuePrinted = navigator[prop];
-		if (valuePrinted === undefined) {
-			valuePrinted = 'undefined';
-		} else if (valuePrinted === null) {
-			valuePrinted = 'null';
-		} else {
-			valuePrinted = valuePrinted.toString();
-		}
+		let valuePrinted = objectToString(navigator[prop]);
+		
 		navigatorListElement.innerHTML += ("<li>" + prop + ":" + valuePrinted + "</li>");
 	}
 </script>
