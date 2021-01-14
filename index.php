@@ -47,6 +47,15 @@ var_dump($_SERVER);
 			return 'null';
 		} else if (typeof object === 'function') {
 			return object.toString();
+		} else if (Array.isArray(object) && object.length >= 1) {
+			let formattedPrint = "[";
+			for (let i=0; i<object.length; i++) {
+				formattedPrint += objectToString(object[i]);
+				if (i != object.length) {
+					formattedPrint += ",";
+				}
+			}
+			return formattedPrint + "]";
 		} else {
 			return JSON.stringify(object);
 		}
