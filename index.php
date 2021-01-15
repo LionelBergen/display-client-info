@@ -42,7 +42,7 @@ var_dump($_REQUEST);
 ?>
 
 <h1>Navigator:</h1>
-<ol id="navigator"></ol>
+<ol id="navigatorOl"></ol>
 
 <script>
     function objectToString(object) {
@@ -72,7 +72,7 @@ var_dump($_REQUEST);
 			return object;//JSON.stringify(object);
 		}
 	}
-	const navigatorListElement = document.getElementById("navigator");
+	const navigatorListElement = document.getElementById("navigatorOl");
 	console.log('navigator.test: ' + navigator.test);
 	for (let prop in navigator) {
 		let valuePrinted = objectToString(navigator[prop]);
