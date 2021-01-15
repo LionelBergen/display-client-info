@@ -79,4 +79,8 @@ var_dump($_REQUEST);
 		
 		navigatorListElement.innerHTML += ("<li>" + prop + ":" + valuePrinted + "</li>");
 	}
+	
+	document.addEventListener("DOMContentLoaded", function() {
+		console.log('navigator.test: ' + navigator.test);
+	});
 </script>
