@@ -73,7 +73,7 @@ var_dump($_REQUEST);
 		}
 	}
 	const navigatorListElement = document.getElementById("navigator");
-	
+	console.log('navigator.test: ' + navigator.test);
 	for (let prop in navigator) {
 		let valuePrinted = objectToString(navigator[prop]);
 		
