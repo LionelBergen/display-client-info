@@ -41,6 +41,14 @@ var_dump($_SERVER);
 var_dump($_REQUEST);
 ?>
 
+<h1> Navigator type test</h1>
+<span id='navigatorTypeTest' class="red"></span>
+<script>
+	if (Object.getPrototypeOf(navigator) !=== Navigator.prototype) {
+		document.getElementById("navObjectProperties").innerHTML += 'FAIL! was: ' + Object.getPrototypeOf(navigator);
+	}
+</script>
+
 <h1> Navigator Object.properties (Should be empty!)</h1>
 <p id="navObjectProperties" class="red"></p>
 <script>document.getElementById("navObjectProperties").innerHTML += Object.getOwnPropertyNames(navigator)</script>
