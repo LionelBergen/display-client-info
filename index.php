@@ -41,6 +41,11 @@ var_dump($_SERVER);
 var_dump($_REQUEST);
 ?>
 
+<h1> Navigator Object.properties (Should be empty!)</h1>
+<p id="navObjectProperties" class="red"></p>
+<script>document.getElementById("navObjectProperties").innerHTML += "Object.getOwnPropertyNames(navigator)"</script>
+<script>document.getElementById("navObjectProperties").innerHTML += "Object.keys(navigator);"</script>
+
 <h1>Navigator:</h1>
 <ol id="navigatorOl"></ol>
 
@@ -84,3 +89,9 @@ var_dump($_REQUEST);
 		console.log('navigator.test: ' + navigator.test);
 	});
 </script>
+
+<style>
+	.red {
+		color: red;
+	}
+</style>
