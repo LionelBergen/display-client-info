@@ -31,10 +31,12 @@ foreach (getallheaders() as $name => $value) {
 }
 ?>
 
-<h1 id="client_info_dump">Whole SERVER:</h1>
+<h1>Whole SERVER:</h1>
+<span id="client_info_dump">
 <?php
 var_dump($_SERVER);
 ?>
+</span>
 
 <h1>WHOLE REQUEST:</h1>
 <?php
